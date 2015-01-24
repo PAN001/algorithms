@@ -3,7 +3,7 @@ function quick_sort (array, l_bound, h_bound) {
   h_bound = (typeof h_bound === "undefined") ? array.length -1 : h_bound;
   if ( h_bound <= l_bound || l_bound >= h_bound )return array;
 
-  var pivot_index = Math.floor((h_bound + l_bound) / 2);
+  var pivot_index = ~~((h_bound + l_bound) / 2);
   var pivot_val = array[pivot_index];
 
   var partitioned_array = [pivot_val];
